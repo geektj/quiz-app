@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import '../src/assets/styles/_index.scss';
+import { Questions } from './components/Questions/questions';
+import { Wrapper } from './context';
+// import { Option } from './components/Option/option';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <div className="App">
+        <div className='container'>
+          <div className='title'>Quiz Questions</div>
+          <div className='overview-panel'>
+            <div className='questions-panel'>
+              <Questions />
+              {/* <Option /> */}
+            </div>
+            <div className='selected-question-panel'>
+              
+            </div>
+            
+          </div>
+            
+        </div>
+
+      </div>
+    </Wrapper>
   );
 }
 
