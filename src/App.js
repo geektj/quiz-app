@@ -1,29 +1,21 @@
-import './App.scss';
-import '../src/assets/styles/_index.scss';
-import { Questions } from './components/Questions/questions';
-import { Wrapper } from './context';
-// import { Option } from './components/Option/option';
+import "./App.scss";
+import "../src/assets/styles/_index.scss";
+import Quiz from "./components/Quiz/quiz";
+import Reports from "./components/Reports/reports";
+import Home from "./components/Home";
+import { Wrapper } from "./context";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <Wrapper>
-      <div className="App">
-        <div className='container'>
-          <div className='title'>Quiz Questions</div>
-          <div className='overview-panel'>
-            <div className='questions-panel'>
-              <Questions />
-              {/* <Option /> */}
-            </div>
-            <div className='selected-question-panel'>
-              
-            </div>
-            
-          </div>
-            
-        </div>
-
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/reports" element={<Reports />} />
+        </Routes>
+      </BrowserRouter>
     </Wrapper>
   );
 }

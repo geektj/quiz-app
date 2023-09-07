@@ -1,0 +1,40 @@
+@import "../../assets/styles/theme";
+
+.question-list-container{
+
+    @include breakpoints('desktop'){
+        background-color: $sky-blue;
+        border: 2px solid $primary-border-color;
+        padding: 10px;
+    }
+
+    .list-header{
+        @include breakpoints('desktop'){
+            font-size: 16px;
+            font-weight: 500;
+            padding: 5px 0px;
+        }
+    }
+
+    .question-listing{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .circle{
+            font-size: 12px;
+            width: 34px;
+            height: 34px;
+            border-radius: 40px;
+            margin: 5px;
+            // color: $black;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // background-color: $grey;
+        }
+    }
+
+    
+
+}

@@ -1,0 +1,51 @@
+@import "../../assets/styles/theme";
+
+.question-status-container{
+
+    @include breakpoints("desktop"){
+        display: flex;
+        flex-direction: column;
+        // padding: 10px
+    }
+    .question-status-index{
+
+        @include breakpoints("desktop"){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 10px;
+            border: 2px solid $primary-border-color;
+        }
+        .status-box{
+
+            @include breakpoints("desktop"){
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 6px;
+            }
+            .circle{
+                font-size: 12px;
+                width: 34px;
+                height: 34px;
+                border-radius: 40px;
+                margin: 5px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                // background-color: $green;
+            }
+            .status-text{
+
+                @include breakpoints("desktop"){
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                
+            }
+        }
+    }
+}

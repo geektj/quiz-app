@@ -1,3 +1,21 @@
+const results  = [
+    {
+        "id": 1,
+        "category": "Entertainment: Film",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which of these movies did Jeff Bridges not star in?",
+        "correct_answer": "The Hateful Eight",
+        "incorrect_answers": [
+          "Tron: Legacy",
+          "The Giver",
+          "True Grit"
+        ],
+        "options": ["The Hateful Eight", "Tron: Legacy", "The Giver", "True Grit"],
+        "selectedAnswer": "Tron: Legacy"
+    }
+]
+
 export const data = {
     "response_code": 0,
     "results": [
