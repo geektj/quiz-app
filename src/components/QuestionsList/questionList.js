@@ -4,7 +4,6 @@ import { context } from '../../context/index';
 import { getStatus } from '../../utils';
 export const QuestionList = (props) => {
     const {questionData, setSelectedQuestion} = useContext(context);
-    console.log('___questionData',questionData)
 
     const handleClick = (question) => {
         question.visited = true;

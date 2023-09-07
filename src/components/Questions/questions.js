@@ -3,11 +3,11 @@ import { context } from "../../context";
 // import { Option } from "../Option/option"
 import { Button } from "../Button/button";
 import "./questions.scss"
+import { useNavigate } from 'react-router-dom';
 
 export const Questions = (props) => {
   const { questionData, setQuestionData, selectedQuestion, setSelectedQuestion } = useContext(context);
-
-//   const [question, setQuestion] = useState({});
+  const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState('')
 
   useEffect(() => {
@@ -20,9 +20,8 @@ export const Questions = (props) => {
 
   const onSubmit = () => {
     if (selectedQuestion?.id === 15) {
-        // reports redirection
+        navigate("/reports");
     } else {
-        console.log("save & next");
         const currentIndex = questionData?.findIndex(q => q.id === selectedQuestion?.id);
         const nextIndex = questionData?.findIndex((q) => q.id === selectedQuestion?.id + 1);
         if (nextIndex > -1) {
@@ -34,7 +33,6 @@ export const Questions = (props) => {
             const updatedData = questionData
             updatedData[currentIndex].selectedAnswer = selectedOption;
             updatedData[currentIndex].visited = true;
-            console.log('__updatedData',updatedData)
             setQuestionData(updatedData)
         }
     }

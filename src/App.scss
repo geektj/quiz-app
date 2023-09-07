@@ -1,5 +1,10 @@
 @import "../src/assets/styles/theme";
 
+.App{
+  width: 100%;
+  background-color: $grey;
+}
+
 .home-container {
   @include breakpoints("desktop") {
     width: 100%;
@@ -54,37 +59,71 @@
 
 .container {
   padding: 0px;
-  background-color: $grey;
+  // background-color: $grey;
 
   @include breakpoints("desktop") {
-    padding: 40px 60px 0px;
+    padding: 40px 0px;
     height: 100vh;
+    width: 75%;
+    margin: auto;
   }
 
-  .title {
-    font-family: "Open Sans";
-    font-weight: 600;
-    color: $black;
-    @include breakpoints("desktop") {
-      text-align: center;
-      font-size: 24px;
-      line-height: 24px;
+  .box{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      font-family: "Open Sans";
+      font-weight: 600;
+      color: $black;
+      @include breakpoints("desktop") {
+        text-align: center;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+    .user-name{
+      display: flex;
+      align-items: center;
+      .placeholder{
+        width: 30px;
+        height: 30px;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        color: $white;
+        background-color: $pink;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+        text-transform: uppercase;
+      }
+      .name{
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: capitalize;
+      }
     }
   }
+  
   .overview-panel {
     background-color: $white;
     @include breakpoints("desktop") {
       display: flex;
       width: 100%;
-      gap: 40px;
+      // gap: 40px;
     }
     .questions-panel {
       @include breakpoints("desktop") {
         width: 70%;
         border: 2px solid $grey;
         padding: 30px;
-        height: calc(100vh - 270px);
-        min-height: 90vh;
+        height: calc(100vh - 140px);
+        // min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
     }
     .selected-question-panel {

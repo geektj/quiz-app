@@ -10,11 +10,15 @@ function App() {
   return (
     <Wrapper>
       <BrowserRouter>
+      <div className="App">
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/reports" element={<Reports />} />
+          
         </Routes>
+        </div>
       </BrowserRouter>
     </Wrapper>
   );
